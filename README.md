@@ -1,114 +1,117 @@
-🪨 Mine vs Rock Prediction using Logistic Regression
+# 🪨 Mine vs Rock Classification using Logistic Regression
 
-This project uses machine learning to classify sonar signals as either a rock or a mine. The dataset is analyzed, preprocessed, and used to train a Logistic Regression model, which can then predict the object type based on input features.
+A Machine Learning project that predicts whether a sonar signal corresponds to a **Rock (R)** or a **Mine (M)** using Logistic Regression.  
+This repository contains complete code, dataset details, workflow steps, and model explanation.
 
-📂 Dataset
-Name: Sonar Dataset
+---
 
-Source: UCI Machine Learning Repository
+## 🚀 Project Overview
+This project uses the **Sonar Dataset (UCI ML Repository)** to train a binary classification model.
 
-Format: CSV with 60 numeric features and 1 categorical label (R for Rock, M for Mine)
+The workflow includes:
+- Data Loading
+- Exploration & Preprocessing
+- Train–Test Split
+- Logistic Regression Model Training
+- Evaluation
+- Prediction System
 
-Each row represents sonar signal returns bounced off a metal cylinder (mine) or a rock in the sea.
+---
 
-🔍 Workflow Summary
-1. Importing Dependencies
-Used libraries:
+## 📂 Dataset Information
+**Name:** Sonar Dataset  
+**Source:** UCI Machine Learning Repository  
+**Format:** CSV  
 
-pandas, numpy for data handling
+- Contains **60 numerical features**
+- Target label:
+  - **R → Rock**
+  - **M → Mine**
 
-scikit-learn for model training, evaluation, and prediction
+Each row represents sonar signal reflections from an object underwater.
 
-2. Data Exploration & Processing
-Loaded using:
+---
 
-python
-Copy
-Edit
-sonar_data = pd.read_csv('/content/sonar data.csv', header=None)
-Performed:
+## 🔍 Project Workflow
 
-Dataset inspection (shape, describe)
-
-Class distribution: R vs M
-
-Group-wise mean values for basic insight
-
-Split features and labels:
-
-python
-Copy
-Edit
-X = sonar_data.drop(columns=60, axis=1)
-Y = sonar_data[60]
-3. Train-Test Split
-Split 90% training, 10% testing using:
-
-python
-Copy
-Edit
-train_test_split(..., stratify=Y, random_state=1)
-4. Model Training
-Model Used: Logistic Regression
-
-Trained using:
-
-python
-Copy
-Edit
-model.fit(X_train, Y_train)
-5. Evaluation
-Accuracy on training data
-
-Accuracy on test data using accuracy_score
-
-6. Prediction System
-Accepts new input values
-
-Converts them to NumPy arrays, reshapes, and predicts
-
-Outputs:
-
-Rock if class = R
-
-Mine if class = M
-
-Example:
-
-python
-Copy
-Edit
-input_data = (0.01, 0.0171, ..., 0.0117)
-✅ Accuracy Scores
-Training Accuracy: 83%
-
-Test Accuracy: 76%
-
-(Values depend on the data split)
-
-🛠 Requirements
-Python 3.x
-
+### **1️⃣ Importing Dependencies**
 Libraries:
+- numpy  
+- pandas  
+- scikit-learn  
 
-numpy
+---
 
-pandas
+### **2️⃣ Data Exploration & Processing**
+Steps performed:
+- Loaded dataset using Pandas  
+- Checked structure & summary stats  
+- Visualized class distribution  
+- Split dataset into features (X) and labels (Y)
 
-scikit-learn
+---
 
-💡 Use Case
-This project is ideal for:
+### **3️⃣ Train-Test Split**
+- 90% data for training  
+- 10% data for testing  
+- Stratified split for balanced class distribution  
 
-Beginners learning ML with real-world datasets
+---
 
-Demonstrating binary classification with basic preprocessing
+### **4️⃣ Model Training**
+Model used:
+- **Logistic Regression**
 
-Practicing model deployment logic (input → predict → interpret)
+Training performed using:
 
-📁 File
-sonar_mine_prediction.ipynb: Complete notebook with data loading, processing, training, and prediction.
+model.fit(X_train, Y_train)
 
-🙋‍♀️ Author
-Anushka Gupta
-Feel free to fork, improve, or reach out for suggestions!
+---
+
+### **5️⃣ Model Evaluation**
+Evaluated using:
+- Training accuracy  
+- Testing accuracy  
+- `accuracy_score()` from scikit-learn  
+
+---
+
+### **6️⃣ Prediction System**
+A custom prediction function accepts **60 sonar values** and predicts:
+
+- **🪨 Rock** → R  
+- **💣 Mine** → M  
+
+Designed for real-time user inputs.
+
+---
+
+## 📈 Accuracy Summary
+
+| Dataset | Accuracy |
+|--------|----------|
+| 🏋️ Training | ~83% |
+| 🧪 Testing | ~76% |
+
+*(Actual values vary with random state and split)*
+
+---
+
+## 🛠 Requirements
+
+Install required libraries:
+pip install numpy pandas scikit-learn
+
+---
+
+### **💡 Use Cases**
+
+This project is perfect for:
+
+Beginners learning Machine Learning
+
+Understanding Logistic Regression
+
+Binary classification practice
+
+Building ML prediction systems
