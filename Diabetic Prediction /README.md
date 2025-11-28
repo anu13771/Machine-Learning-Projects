@@ -117,10 +117,7 @@ README.md	Project documentation (this file)
 
 This project can be useful for:
 
-Beginners learning machine learning classification tasks
-
-Demonstrating health data analytics & predictive modelling
-
-Practicing real-world ML workflow including preprocessing, model building, evaluation
-
-Building a foundation for deployment (web app, API etc.)
+- Beginners learning machine learning classification tasks
+- Demonstrating health data analytics & predictive modelling
+- Practicing real-world ML workflow including preprocessing, model building, evaluation
+- Building a foundation for deployment (web app, API etc.)
