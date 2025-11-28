@@ -84,16 +84,18 @@ model.fit(X_train, y_train)
 
 Metrics computed:
 
-Accuracy
-
-Precision
-
-Recall
-
-Confusion Matrix
+- Accuracy
+- Precision
+- Recall
+- Confusion Matrix
 
 Typical results:
 
+| Metric | Score |
+|--------|----------|
+| Accuracy | ~97% |
+| Precision | High |
+| Recall | High |
 
 ---
 
@@ -101,9 +103,8 @@ Typical results:
 
 You can enter any custom message and the model will output:
 
-Spam
-
-Not Spam (Ham)
+- Spam
+- Not Spam (Ham)
 
 Example:
 
@@ -116,3 +117,15 @@ input_mail = ["Congratulations! You won $1000!!!"]
 Install necessary libraries:
 
 pip install numpy pandas scikit-learn nltk
+
+---
+
+### **💡 Use Cases**
+
+This project is useful for:
+
+- Beginners learning NLP + machine learning
+- Understanding TF-IDF + Naive Bayes
+- Email filtering projects
+- Real-world spam detection demos
+- Deploying a spam classifier using Streamlit / Flask
