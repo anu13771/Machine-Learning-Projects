@@ -86,5 +86,14 @@ The notebook features a function or interactive cell that allows:
 ## 🛠 Requirements  
 Install the required libraries:
 
-```bash
 pip install numpy pandas scikit-learn seaborn matplotlib
+
+---
+
+### **💡 Use Cases**
+
+- Personalized music streaming recommendations
+- Playlist generation for mood/time/genre
+- Music discovery engines for new users and cold-start songs
+- Educational use: learning recommendation system algorithms
+- Building a web app or API for instant music recommendations
